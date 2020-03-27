@@ -1,0 +1,22 @@
+author: Juan Molero
+description: MSGPACK Support
+type: lib
+version: 1.0
+
+platforms: [ esp32 ]
+
+includes:
+  - ${mos.modules.msgpack_module.path}/include
+
+sources:
+  - src
+  - ${mos.modules.msgpack_module.path}/src
+
+modules:
+  - origin: https://github.com/DrBomb/msgpack-c
+    name: msgpack_module
+
+cdefs:
+  MSGPACK_ENDIAN_LITTLE_BYTE: 1
+
+manifest_version: 2017-09-29
