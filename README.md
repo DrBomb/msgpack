@@ -8,6 +8,6 @@ For more information please visit the source repo here: [https://github.com/msgp
 
 ## Usage
 
-For some reason the `sbuf` implementation of mutable buffers inside msgpack-c make the ESP32 crash.
+For some reason the `sbuf` implementation of mutable buffers inside msgpack-c makes the ESP32 crash.
 
-When packing, use the provided `msgpack_mbuf_write` callback instead of using the `sbuf` ones. Will work the same.
+When packing, use the provided `msgpack_mbuf_write` callback to write into an `mbuf` instead.
